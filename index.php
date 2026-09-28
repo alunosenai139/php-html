@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade T15</title>
+</head>
+<body>
+
+    <h1>Qual é função de uma condição dentro da programação?</h1>
+    </h2>A função de uma condição na programação é permitir que o programa tome decisões e mude seu caminho de execução com base em regras lógicas</h2>
+
+    <h1>Explique sobre o bloco if e else</h1>
+    </h2>O bloco if e else são estrutura de controle de fluxo na programação que permite ao programa tomar decisões e executar caminhos diferentes com base em condições, o if Executa um bloco de código se uma condição for verdadeira enquanto else: Executa um bloco alternativo se essa condição for falsa.</h2>
+
+    <h1> Qual é a diferença entre o if e Swicth?</h1>
+    </h2>A principal diferença entre o if e o switch está na flexibilidade do que cada um pode fzer e na forma como organizam o código: enquanto o if avalia códigos complexos, permitinso e analisando condições, o switch compara uma única variável contra uma lista de valores fixos</h2>
+
+    <h1>A onde aplicamos os comandos de fluxo de controle for e while?</h1>
+    </h2>Os comandos for e while são estruturas de repetição ou loops, onde principal diferença entre eles está em saber ou não quantas vezes o código precisará ser repetido.</h2>
+
+    <h1>Qual é a função do laço de repetição na programação?</h1>
+    </h2>O que um laço de repetição faz na programação é deixar mais fácil de fazer de um bloco de código ser repetido várias vezes, tirando a necessidade de escrever as mesmas linhas de código várias vezes</h2>
+
+    <h1>Faça um algoritmo de uma tabuada 1 ao 10, usando o laço de repetição fo</h1>
+    <h1>Tabuada</h1>
+    <form method="GET" action="">
+        <label for="valor1">Coloque um número:</label><br>
+        <input type="number" id="valor1" name="valor1" required><br><br>
+        <button type="submit">Gerar Tabuada</button>
+    </form>
+
+    <br>
+    <?php
+    if (isset($_GET["valor1"])) {
+        $numero = filter_input(INPUT_GET, 'valor1', FILTER_VALIDATE_INT);
+
+        if ($numero !== false) {
+            echo "<h2>Tabuada do $numero</h2>";
+
+            for ($i = 1; $i <= 10; $i++) {
+                $resultado = $numero * $i;
+                echo "$numero x $i = $resultado <br>";
+            }
+        } else {
+            echo "<p style='color: red;'>Por favor, insira um número válido.</p>";
+        }
+    }
+    ?>
+</body>
+</html>
+
+    <h1>Faça um programa em PHP que defina uma variável com o peso e a altura de uma pessoa. Calcule e mostre o IMC</h1>
+    <h1>calcular IMC</h1>
+
+    <form method="GET">
+        <label>Coloque seu peso</label><br>
+        <input type="number" name="valor1" required><br><br>
+
+        <label>Coloque sua altura</label><br>
+        <input type="number" name="valor2" required><br><br>
+
+        <button type="submit">calcule</button>
+    </form>
+</html>
+    <?php
+    if (isset($_GET["valor1"]) && isset($_GET["valor2"])) {
+        
+        $valor1 = $_GET["valor1"];
+        $valor2 = $_GET["valor2"];
+        if ($valor2 > 0) {
+            $imc = $valor1 / ($valor2 * $valor2);
+            echo "<h2>Seu IMC é: " . number_format($imc, 2, ',', '.') . "</h2>";
+        } else {
+            echo "<h2 style='color: red;'>A altura deve ser maior que zero!</h2>";
+        }
+    }
+    ?>
+</body>
+
+    <h1>Faça uma página em HTML que leia o placar de um jogo de futebol e Informe se houve empate ou se a vitória foi do 1º ou do 2º time.</h1>
+</head>
+<body>
+
+    <h1>Análise do Placar</h1>
+
+    <!-- Formulário para inserir os gols -->
+    <form method="POST" action="">
+        <div class="form-grupo">
+            <label for="time1">Gols do 1º Time:</label>
+            <input type="number" id="time1" name="gols_time1" min="0" required>
+        </div>
+
+        <div class="form-grupo">
+            <label for="time2">Gols do 2º Time:</label>
+            <input type="number" id="time2" name="gols_time2" min="0" required>
+        </div>
+
+        <button type="submit">Verificar Resultado</button>
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        // Obtém e valida os dados recebidos do formulário
+        $gols_time1 = filter_input(INPUT_POST, 'gols_time1', FILTER_VALIDATE_INT);
+        $gols_time2 = filter_input(INPUT_POST, 'gols_time2', FILTER_VALIDATE_INT);
+
+        if ($gols_time1 !== false && $gols_time2 !== false) {
+            echo "<div class='resultado'>";
+            echo "<h3>Placar: $gols_time1 x $gols_time2</h3>";
+
+            if ($gols_time1 > $gols_time2) {
+                echo "<p><strong>Resultado:</strong> Vitória do 1º time!</p>";
+            } elseif ($gols_time2 > $gols_time1) {
+                echo "<p><strong>Resultado:</strong> Vitória do 2º time!</p>";
+            } else {
+                echo "<p><strong>Resultado:</strong> O jogo terminou em Empate!</p>";
+            }
+            
+            echo "</div>";
+        } else {
+            echo "<p style='color: red;'>Por favor, insira placares válidos.</p>";
+        }
+    }
+    ?>
+
+</body>
+
+    <h1>Faça um programa em PHP que mostre todos os números inteiros de 100 a 200 com incremento de 2 em 2.</h1>
+    <?php
+    echo "<h2>Números de 100 a 200 (incremento de 2 em 2):</h2>";
+
+    for ($i = 100; $i <= 200; $i += 2) {
+    echo "$i ";
+    }
+    ?>
+
+    <h1> Faça um programa em PHP que apresente todos os valores impares no intervalo de 500 a 1000.</h1>
+    <?php
+echo "<h2>Números ímpares de 500 a 1000:</h2>";
+
+// O laço começa em 501 (primeiro ímpar) e pula de 2 em 2
+for ($i = 501; $i <= 1000; $i += 2) {
+    echo "$i ";
+}
+?>
+
+</body>
+</html>
