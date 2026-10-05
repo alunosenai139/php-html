@@ -17,7 +17,6 @@
         <input type="number" name="valor3" step="any" required><br><br>
 
         <label>Coloque o seu nome</label><br>
-        <!-- CORRIGIDO: O tipo correto para texto é "text" e não leva "step" -->
         <input type="text" name="nome" required><br><br>
 
         <button type="submit">Calcule</button>
