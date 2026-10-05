@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIADE T16</title>
+</head>
+<body>
+    <h1>1. O que é array?</h1>
+    <h2>Um array é uma estrutura de dados que armazena muitos valores em uma única variável. Em vez de criar uma variável para cada item (como nome1 e nome2), você guarda todos eles juntos em uma lista organizada.</h2>br
+    <h1>2. Qual é a diferença entre vetor e matriz?</h1>
+    <h2>• Vetor: É uma lista de uma única linha ou coluna. Você precisa de apenas um número para encontrar um valor.</h2>br
+    <h2>Matriz: É uma tabela com linhas e colunas (um array de arrays). Você precisa de dois ou mais números para encontrar um valor.</h2>br
+    <h1>3. O que é índice?</h1>
+    <h2>O índice é a posição de um item dentro do array. É o número ou a chave que você usa para indicar exatamente qual elemento quer acessar ou alterar.</h2>
+    <h1>4. O vetor e a matriz iniciam sua organização com o número 1 ou 0?</h1>
+    <h2>Por padrão na mior parte das linguagens (Ex:PHP,JavaScript,C,Java,Python), os arrays iniciam com o número 0. O primeiro elemento está na posição [0], o segundo na [1], e assim por diante.</h2>
+    <h1>5. Qual é a finalidade do comando array_merge()?</h1>
+    <h2>A função array_merge() do PHP serve para juntar dois ou mais arrays em um único array. Os elementos do segundo array são anexados ao final do primeiro.</h2>
+    <h1>6. Para que serve o comando PHP_EOL?</h1>
+    <h2>O PHP_EOL é uma constante do PHP que serve para criar uma quebra de linha no código do terminal. A parte boa é que ele é "inteligente": ele detecta automaticamente o sistema operacional do servidor (Windows, Linux ou macOS) e usa o caractere certo de quebra de linha para aquele sistema.</h2>
+</body>
+</html>
