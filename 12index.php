@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 1 – Criando um vetor</h1>
+    <?php
+    $frutas = array("banana", "maçã", "laranja", "abacaxi", "uva");
+    print_r($frutas);
+    ?>
+    <h1>Exercício 2 – Acessando valores pelo índice</h1>
+    <?php
+    $cores = array("vermelho", "azul", "verde", "amarelo", "roxo");
+    echo" . $cores[0,2,4
+    ?>
+    
+</body>
+</html>
