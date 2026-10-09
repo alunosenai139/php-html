@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 1 – Criando um vetor</h1>
+    <?php
+    $frutas = array("banana", "maçã", "laranja", "abacaxi", "uva");
+    print_r($frutas);
+    ?>
+
+    <h1>Exercício 2 – Acessando valores pelo índice</h1>
+    <?php
+    $cores = array("azul", "roxo", "verde", "amarelo", "vermelho");
+
+    echo $cores[0] . ", " . $cores[2] . ", " . $cores[4] . "<br>";
+    ?>
+
+    <h1>Exercício 3 – Alterando um valor do vetor</h1>
+    <?php
+    $animais = array("cachorro", "cobra", "gato", "elefante",);
+    $animais[1] = "leão";
+    print_r($animais);
+    ?>
+
+    <h1>Exercício 4 – Acrescentando um novo valor</h1>
+    <?php
+    $notas = array(90, 79, 65, 60);
+    $notas[4] = 1000;
+    print_r($notas);
+    ?>
+
+    <h1>Exercício 5 – Criando uma matriz</h1>
+    <?php
+    $alunos = array(
+    ["João", 80, 65, 95], 
+    ["Maria", 65, 55, 75],  
+    ["Ana", 90, 80, 100]    
+    );
+
+    $aluno2 = $alunos[1][0];
+
+    $nota2B = $alunos[1][3];
+
+    echo "<h2>Informações do Aluno:</h2>";
+    echo "Nome do aluno: " . $aluno2 . "<br>";
+    echo "Terceira nota: " . $nota2B . "<br>";
+    ?>
+
+    <h1>Exercício 6 – Alterando um valor da matriz</h1>
+    <?php
+    $cadastro = array(
+    ["João", 17,],
+    ["Maria", 15],
+    ["Ana", 12]
+    $cadastro[1][1]= 16
+    );
+    ?>
+
+    <h1>Exercício 7 – Trabalhando com chaves</h1>
+    <?php
+    $produto = array(
+    "nome" => "Bolacha",
+    "preco" => 2.50,
+    "categoria" => "Alimentos"
+    );
+    echo "Nome do produto: " . $produto["nome"] . "<br>";
+    echo "Preço do produto: R$ " . $produto["preco"] . "<br>";
+    ?>
+
+    <h1>Exercício 8 – Mesclando arrays</h1>
+    <?php
+    $frutas1 = array("banana", "maçã", "abacaxi");
+    $frutas2 = array("laranja", "uva", "melancia");
+    $frutas = array_merge($frutas1, $frutas2);
+    print_r($frutas);
+    ?>
+
+    <h1>Exercício 9 – Mesclando informações</h1>
+    <?php
+    $alunos1 = array(
+    ["João"], 
+    ["Maria"],  
+    ["Ana"]    
+    );
+    $alunos2 = array(
+    ["enzo"]
+    ["vinicius"]
+    ["emanuel"]
+    );
+    $alunos = array_merge($alunos1, $alunos2);
+    print_r($alunos);
+    ?>
+    <h1>Exercício 10 – Cadastro utilizando array</h1>
+    <?php
+    $cliente = array("nome", "idade", "email", "telefone", "endereço");
+    $cliente[0] = "emanuel";
+    $cliente[1] = "16";
+    $cliente[2] = "emanuelverbinen@gmail.com"
+    $cliente[3] = "(41) 9 9948-4021"
+    $cliente[4] = "rua alberto panek, 376"
+    print_r($cliente)[0]"<br>";
+    print_r($cliente)[1]"<br>";
+    print_r($cliente)[2]"<br>";
+    print_r($cliente)[3]"<br>";
+    print_r($cliente)[4]"<br>";
+    ?>
+</body>
+</html>
